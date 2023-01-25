@@ -1,5 +1,5 @@
 
-import std/[strutils, sequtils]
+import mustache
 
 type HtmlTemplate* = object
     html* : string 
@@ -12,5 +12,9 @@ proc read_template*(path : string) : HtmlTemplate =
     )
 
 proc apply_template*(t : HtmlTemplate, mappings : seq[(string, string)]) : string = 
-    return mappings.foldl(replace(a,"{{{"&b[0]&"}}}",b[1]),t.html)
+    var c = newContext()
+    for m in mappings:
+        c[m[0]]=m[1]
+    return t.html.render(c)
+    
     
