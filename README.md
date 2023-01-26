@@ -14,7 +14,7 @@ Eldritch Stencil is a simple generator for blog posts using markdown sources. It
 
 # License
 
-Shrew is free to use, modify, and distribute under the terms of the BSD 3-Clause Clear License. See [LICENSE.md](LICENSE.md) for details.
+Stencil is free to use, modify, and distribute under the terms of the BSD 3-Clause Clear License. See [LICENSE.md](LICENSE.md) for details.
 
 # Examples
 
